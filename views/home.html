@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+</head>
+<body>
+    <main>
+        <form id = "guestbook-form" action = "#" method="get"> 
+            <fieldset>
+                <legend class = "legend-header">Contact Form</legend>
+                <label for="firstname">First Name</label>
+                <input type = "text" id = "firstname" name = "firstname">
+                <label for="lastname">Last Name</label>
+                <input type = "text" id = "lastname" name = "lastname">
+                <label for="jobtitle">Job Title</label>
+                <input type = "text" id = "jobtitle" name = "jobtitle">
+                <label for="company">Company</label>
+                <input type = "text" id = "company" name = "company">
+                <label for="linkedin">LinkedIn URL</label>
+                <input type = "text" id = "linkedin" name = "linkedin">
+                <label for="email">Email Address</label>
+                <input type = "email" id = "email" name = "email">
+                <label for ="met">How did we meet?</label>
+                <select id = "met" name = "met">
+                    <option value="none">Please select</option>
+                    <option value ="work">Work</option>
+                    <option value ="client">Client</option>
+                    <option value="recommend">Recommendation</option>
+                </select>
+                <label for="other">Other (please specify)</label>
+                <input type = "text" id = "other" name = "other">
+                <label for="message">Message</label>
+                <textarea id = "message" name = "message">
+                </textarea>
+                <legend>Choose an email format:</legend>
+                    <label for="html">
+                        <input type = "radio" id = "html" name = "email-format" value = "html">HTML
+                    </label>
+                    <label for="text">
+                        <input type = "radio" id = "text" name = "email-format" value = "text">Text
+                    </label>
+            </fieldset>
+			<button type = "submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
