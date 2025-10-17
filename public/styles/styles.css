@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 2em;
+}
+
+main {
+    max-width: 55em;
+    margin: 0 auto;
+}
+
+form {
+    background: white;
+    border-radius: 0.4em;
+    box-shadow: 0 0.2em 0.6em rgba(0,0,0,0.15);
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.legend-header {
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1.2em 0;
+    padding-bottom: 0.4em;
+}
+
+fieldset {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2em 1.6em;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.field label {
+    font-weight: 700;
+    margin-bottom: 0.4em;
+    display: block;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 0.5em 0.6em;
+    border: 0.08em solid #ccc;
+    border-radius: 0.3em;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 8em;
+    resize: vertical;
+}
+
+.field-message {
+    grid-column: 1 / 4;
+}
+
+.field-check {
+    grid-column: 1 / 2;
+    align-items: center;
+    width: 15em;
+}
+
+.inline-checkbox {
+    display: inline-flex;
+    gap: 0.5em;
+    align-items: center;
+    font-weight: 400;
+}
+
+.field-radio {
+    grid-row: 6;
+    grid-column: 1 / 4;
+    display: flex;
+    align-items: flex-start;
+}
+
+.radio-title {
+    font-weight: 700;
+    margin-right: 0.6em;
+    align-self: center;
+}
+
+.mailing-title {
+    font-weight: 700;
+    margin-right: 0.6em;
+    align-self: center; 
+}
+
+.inline-radio {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.field-submit {
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.6em;
+}
+
+button[type="submit"] {
+    background-color: lightgreen;
+    color: white;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 0.35em;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #3bdf43;
+}
+
+@media (max-width: 768px) {
+    fieldset {
+        grid-template-columns: 1fr;
+        gap: 0.9em;
+    }
+
+    .field-message {
+        grid-column: 1 / 2;
+    }
+
+    .field-check, .field-radio, .field-submit {
+        grid-column: 1 / 2;
+    }
+
+    .field-radio {
+        flex-direction: column;
+        align-items: flex-start;
+        grid-row: 11;
+        gap: 0.4em;
+    }
+}
