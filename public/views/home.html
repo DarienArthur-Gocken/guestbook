@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guestbook</title>
-    <link rel="stylesheet" href="../styles/styles.css">  
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../js/guestbook.js" defer></script>
 </head>
 <body>
     <main>
@@ -15,11 +16,13 @@
                 <div class="field">
                     <label for="firstname">First Name</label>
                     <input type = "text" id = "firstname" name = "firstname">
+                    <span id="err-fname" class="error">First name cannot be empty!</span>
                 </div>
 
                 <div class="field">
                     <label for="lastname">Last Name</label>
                     <input type = "text" id = "lastname" name = "lastname">
+                    <span id="err-lname" class="error">Last name cannot be empty!</span>
                 </div>
 
                 <div class="field">
@@ -35,11 +38,13 @@
                 <div class="field">
                     <label for="linkedin">LinkedIn URL</label>
                     <input type = "text" id = "linkedin" name = "linkedin">
+                    <span id="err-linkedin" class="error">LinkedIn URL must start with https://linkedin.com/in/</span>
                 </div>
 
                 <div class="field">
                     <label for="email">Email Address</label>
                     <input type = "email" id = "email" name = "email">
+                    <span id="err-email" class="error">Please enter a valid email address!</span>
                 </div>
 
                 <div class="field">
@@ -49,12 +54,15 @@
                         <option value ="work">Work</option>
                         <option value ="client">Client</option>
                         <option value="recommend">Recommendation</option>
+                        <option value="other">Other</option>
                     </select>
+                    <span id="err-met" class="error">Please select how we met.</span>
                 </div>
 
                 <div class="field">
                     <label for="other">Other (please specify)</label>
                     <input type = "text" id = "other" name = "other">
+                    <span id="err-othermet" class="error">Please specify how we met!</span>
                 </div>
 
                 <div class="field field-message">

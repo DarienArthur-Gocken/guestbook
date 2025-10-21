@@ -146,3 +146,8 @@ button[type="submit"]:hover {
         gap: 0.4em;
     }
 }
+
+.error {
+    color: darkred;
+    display: none;
+}
