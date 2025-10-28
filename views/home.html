@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guestbook</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <script src="../js/guestbook.js" defer></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="js/guestbook.js" defer></script>
 </head>
 <body>
     <main>
-        <form id = "guestbook-form" action = "#" method="get"> 
+        <form id = "guestbook-form" action = "submit-order" method="post"> 
             <fieldset>
                 <legend class = "legend-header">Contact Form</legend>
 
@@ -72,14 +72,14 @@
 
                 <div class="field-check">
                     <label class="inline-checkbox">
-                        <input type = "checkbox" id = "mailing-list" name = "mailing-list" value = "yes">
+                        <input type = "checkbox" id = "mailinglist" name = "mailinglist" value = "yes">
                         <div class = "mailing-title">Please add me to your mailing list</div>
                     </label>
                 </div>
                 <div class="field-radio">
                     <div class="radio-title">Choose an email format:</div>
-                    <label class="inline-radio"><input type = "radio" id = "html" name = "email-format" value = "html"> HTML</label>
-                    <label class="inline-radio"><input type = "radio" id = "text" name = "email-format" value = "text"> Text</label>
+                    <label class="inline-radio"><input type = "radio" id = "html" name = "emailformat" value = "html"> HTML</label>
+                    <label class="inline-radio"><input type = "radio" id = "text" name = "emailformat" value = "text"> Text</label>
                 </div>
 
                 <div class="field-submit">

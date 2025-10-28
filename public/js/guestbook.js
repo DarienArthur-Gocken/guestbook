@@ -5,7 +5,7 @@ const email = document.getElementById("email");
 const linkedin = document.getElementById("linkedin");
 const met = document.getElementById("met");
 const other = document.getElementById("other");
-const mailingList = document.getElementById("mailing-list");
+const mailingList = document.getElementById("mailinglist");
 const emailFormats = document.querySelector(".field-radio");
 
 emailFormats.style.display = "none";
