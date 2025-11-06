@@ -1,0 +1,45 @@
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1.25rem 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.45rem;
+    display: flex;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+nav a {
+    text-decoration: none;
+    color: #2b2358;
+    padding: 0.4rem 0.6rem;
+    display: inline-block;
+    border-radius: 0.35rem;
+    font-weight: 600;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background: rgba(30,144,255,0.08);
+    color: #0b5fa5;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.35rem;
+        padding: 0.6rem;
+    }
+    nav {
+        padding: 0 0.6rem;
+    }
+}

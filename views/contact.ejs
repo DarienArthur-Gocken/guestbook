@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guestbook</title>
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/nav.css">
     <script src="js/guestbook.js" defer></script>
 </head>
 <body>
+    <%- include('partials/nav') %>
     <main>
         <form id = "guestbook-form" action = "submit-order" method="post"> 
             <fieldset>

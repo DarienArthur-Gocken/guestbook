@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guestbook</title>
+
+	<link rel = "stylesheet" href = '/styles/styles.css'>
+    <link rel="stylesheet" href="/styles/nav.css">
+	<link rel = "stylesheet" href = '/styles/confirm-admin.css'>
+</head>
+<body>
+    <%- include('partials/nav') %>
+	<main>
+		<div class="page-header">
+			<h1>Thank you, <%= contact.fname %> <%= contact.lname %>!</h1> <br>
+			<h2>I received your contact on <%= contact.dateTime %>.</h2>
+		</section>
+
+		<div class="confirmation">
+			<h2>Contact details</h2>
+			<ul class="contact-details">
+				<li><span class="label">Job Title:</span> <%= contact.jobtitle %></li>
+				<li><span class="label">Company:</span> <%= contact.company %></li>
+				<li><span class="label">LinkedIn:</span> <a href="<%= contact.linkedin %>"><%= contact.linkedin %></a></li>
+				<li><span class="label">Email:</span><%= contact.email %></li>
+				<li><span class="label">How did we meet?</span> <%= contact.met %></li>
+				<li><span class="label">Other comments:</span> <%= contact.other %></li>
+				<li><span class="label">Mailing list:</span> <%= contact.mailingList %> (<%= contact.emailFormat %>)</li>
+			</ul>
+		</section>
+
+	</main>
+</body>
+</html>

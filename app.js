@@ -4,37 +4,30 @@ const app = express();
 
 const PORT = 3003;
 
+app.set('view engine', 'ejs');
+
 app.use(express.static('public'));
 
 // form data in req.body
 app.use(express.urlencoded({ extended: true }));
 
-const orders = [];
+const contacts = [];
 
 app.get('/', (req, res) => {
-
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+    res.render('resume');
 });
 
-app.get('/contact-us', (req,res) => {
-
-    res.sendFile(`${import.meta.dirname}/views/contact.html`);
-});
-
-app.get('/confirm', (req,res) => {
-
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+app.get('/contact', (req,res) => {
+    res.render('contact');
 });
 
 app.get('/admin', (req,res) => {
-
-    res.send(orders);
-    //res.sendFile(`${import.meta.dirname}/views/admin.html`);
+    res.render('admin', {contacts});
 });
 
 app.post('/submit-order', (req,res) => {
 
-    const order = {
+    const contact = {
         fname: req.body.firstname,
         lname: req.body.lastname,
         jobtitle: req.body.jobtitle,
@@ -44,13 +37,14 @@ app.post('/submit-order', (req,res) => {
         met: req.body.met,
         other: req.body.other,
         mailingList: req.body.mailinglist,
-        emailformat: req.body.emailformat
+        emailFormat: req.body.emailformat,
+        dateTime: new Date().toLocaleString()
     };
 
-    orders.push(order);
-    console.log(orders);
+    contacts.push(contact);
+    console.log(contacts);
 
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+    res.render('confirmation', {contact});
 });
 
 app.listen(PORT, () => {

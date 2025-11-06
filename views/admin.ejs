@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guestbook</title>
+
+	<script src ="js/guestbook.js" defer></script>
+
+	<link rel = "stylesheet" href = '/styles/styles.css'>
+    <link rel="stylesheet" href="/styles/nav.css">
+	<link rel = "stylesheet" href = '/styles/confirm-admin.css'>
+</head>
+<body>
+    <%- include('partials/nav') %>
+	<main>
+        <section>
+            <% if (contacts.length === 0) { %>
+                <div class="empty-msg">No submissions yet.</div>
+            <% } %>
+
+            <% contacts.forEach(contact => { %>
+                <article>
+                    <div>
+                        <h2><%= contact.fname %> <%= contact.lname %></h2>
+                        <p class="contact-meta">Submitted: <%= contact.dateTime %></p>
+                        <ul class="contact-details">
+                            <li><span class="label">Job:</span> <%= contact.jobtitle %></li>
+                            <li><span class="label">Company:</span> <%= contact.company %></li>
+                            <li><span class="label">LinkedIn:</span> <a class="link" href="<%= contact.linkedin %>"><%= contact.linkedin %></a></li>
+                            <li><span class="label">Email:</span> <%= contact.email %></li>
+                            <li><span class="label">Met:</span> <%= contact.met %></li>
+                            <li><span class="label">Other:</span> <%= contact.other %></li>
+                            <li><span class="label">Mailing List:</span> <%= contact.mailingList %> (<%= contact.emailFormat %>)</li>
+                        </ul>
+                    </div>
+                </article>
+            <% }) %>
+        </section>
+	</main>
+</body>
+</html>
